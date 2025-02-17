@@ -20,13 +20,15 @@ Advanced Routing Techniques
 from celery import shared_task
 
 
-@shared_task(name="tasks.task_routing.send_email")
+@shared_task(name="cookiecutter_playground.newapp.tasks.x01_task_routing.send_email")
 def send_email(to, subject, message):
     print("sending email ....")  # noqa: T201
     # Code to send an email
 
 
-@shared_task(name="tasks.task_routing.cleanup_database")
+@shared_task(
+    name="cookiecutter_playground.newapp.tasks.x01_task_routing.cleanup_database"
+)
 def cleanup_database():
     print("cleaning up database ....")  # noqa: T201
     # Code to clean up old database records

@@ -332,11 +332,11 @@ CELERY_TASK_QUEUES = {
 
 # TASK ROUTING
 CELERY_TASK_ROUTES = {
-    "tasks.task_routing.send_email": {
+    "cookiecutter_playground.newapp.tasks.x01_task_routing.send_email": {
         "queue": "email_tasks",
         "routing_key": "email.send",
     },
-    "tasks.task_routing.cleanup_database": {
+    "cookiecutter_playground.newapp.tasks.x01_task_routing.cleanup_database": {
         "queue": "database_tasks",
         "routing_key": "database.cleanup",
     },
