@@ -13,6 +13,7 @@ router.register("users", UserViewSet)
 urlpatterns = [
     path("products/", view=views.product_list),
     path("products/<int:pk>", view=views.product_detail),
+    path("orders/", view=views.order_list),
 ]
 
 app_name = "api"
