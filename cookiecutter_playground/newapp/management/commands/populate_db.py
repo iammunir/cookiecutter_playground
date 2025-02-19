@@ -17,7 +17,7 @@ class Command(BaseCommand):
         # get or create superuser
         user = User.objects.filter(username="admin").first()
         if not user:
-            user = User.objects.create_superuser(username="admin", password="test")  # noqa: S106
+            user = User.objects.create_superuser(username="admin", password="admin")  # noqa: S106
 
         # create products - name, desc, price, stock, image
         products = [

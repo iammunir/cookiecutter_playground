@@ -11,10 +11,10 @@ router = DefaultRouter() if settings.DEBUG else SimpleRouter()
 router.register("users", UserViewSet)
 
 urlpatterns = [
-    path("products/", view=views.product_list),
+    path("products/", view=views.ProductListAPIView.as_view()),
     path("products/info/", view=views.product_info),
-    path("products/<int:pk>", view=views.product_detail),
-    path("orders/", view=views.order_list),
+    path("products/<int:product_id>/", view=views.ProductDetailAPIView.as_view()),
+    path("orders/", view=views.OrderListAPIView.as_view()),
 ]
 
 app_name = "api"
